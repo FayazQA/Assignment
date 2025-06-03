@@ -62,12 +62,13 @@ public class Assignment8 {
 			}
 		}
 		
+		int finalAccountBlance =totalAmountCredited + totalAmountDebited;
 		 
 	        System.out.println("Total number of credit transactions: " + numberOfCreditedTransaction);
 	        System.out.println("Total number of debit transactions: " + numberOfDebitedTransaction);
 	        System.out.println("Total credited amount: " + totalAmountCredited);
 	        System.out.println("Total debited amount: " + totalAmountDebited);
-	        System.out.println("Final account balance: " + (totalAmountCredited + totalAmountDebited));
+	        System.out.println("Final account balance: " + finalAccountBlance);
 	        System.out.println("Total number of suspicious transactions: " + suspiciousTransaction);
 		
 		
