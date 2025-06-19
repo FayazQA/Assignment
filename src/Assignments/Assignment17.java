@@ -8,7 +8,7 @@ public class Assignment17 {
 		
 		for(int i=0;i<=n;i++)//for loop for number of lines or rows
 		{
-			for(int j=0;j<n-i;j++)// for printing Spaces
+			for(int j=i;j<n;j++)// for printing Spaces
 			{
 				System.out.print(" ");
 			}
