@@ -5,6 +5,7 @@ public class Assignment15 {
 	//Declaring variable outside the method to use the same variable in all methods
 	String sentence = "Java programming is fun and challenging";
 
+	String[] words = sentence.split(" ");
 	// method for reversing String
 	public void reverseString() {
 
@@ -15,10 +16,10 @@ public class Assignment15 {
 		//for loop to Reverse string 
 		//sentence.length() - 1 = Scanning starts from last letter of 
 		
-		for (int i = sentence.length() - 1; i >= 0; i--) {
+		for (int i = words.length - 1; i >= 0; i--) {
 			
 			//charAt(i) = index of letters in word or Sentence
-			reverseSentense = reverseSentense + sentence.charAt(i);
+			reverseSentense = reverseSentense +" "+ words[i];
 
 		}
 
@@ -30,7 +31,7 @@ public class Assignment15 {
 	public void wordsCount() {
 		//.Split method is use to split the sentence into separate words
 		// adding each word into a Array
-		String[] words = sentence.split(" ");
+		
 		
 		//.length variable use to know number of words in Array
 		System.out.println("Count of words in Sentence :" + words.length);
@@ -38,20 +39,12 @@ public class Assignment15 {
 	}
 
 	public void firstLetterUppercase() {
-		String[] words = sentence.split(" ");
-
-		StringBuilder capitalizedSentence = new StringBuilder();
-
+		String uppercaseSentence = "";
 		for (String word : words) {
-			if (!word.isEmpty()) {
-
-				capitalizedSentence.append(Character.toUpperCase(word.charAt(0)));
-				capitalizedSentence.append(word.substring(1));
-				capitalizedSentence.append(" ");
-			}
+			
+			uppercaseSentence = uppercaseSentence + word.substring(0, 1).toUpperCase() + word.substring(1) + " ";
 		}
-
-		System.out.println("Capitalized Sentence: " + capitalizedSentence.toString().trim());
+		System.out.println("Uppercase Sentence is: " + uppercaseSentence);
 
 	}
 
